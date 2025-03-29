@@ -1,4 +1,4 @@
-function [Q, residue] = deflacion_polinomial(coefficients, root)
+function [Q, residue] = polynomial_deflation(coefficients, root)
 % deflacion_polinomial - Deflates a polynomial by dividing it by (x - root)
 %
 % Inputs:
@@ -12,6 +12,11 @@ function [Q, residue] = deflacion_polinomial(coefficients, root)
     n = length(coefficients) - 1;       % Degree of the polynomial
     Q = zeros(1, n);                    % Initialize array for the deflated polynomial
     Q(1) = coefficients(1);             % Copy the first coefficient
+
+
+   % for i = 2:n
+   %     Q(i) = Q(i-1) * root + coefficients(i);  % Synthetic division
+   % end
 
     i = 2;
     while i <= n
