@@ -1,11 +1,11 @@
-% Test Script for deflacion_polinomial
+% Test Script for polynomial_deflation
 
 % Define the polynomial: f(x) = (x - 4)(x + 6) = x^2 + 2x - 24
 coeffs = [1 2 -24];   % Coefficients of f(x)
 root = 4;             % Known root
 
 % Call the deflation function
-[Q, residue] = deflacion_polinomial(coeffs, root);
+[Q, residue] = polynomial_deflation(coeffs, root);
 
 % Display results
 fprintf('Original Polynomial Coefficients: ');
